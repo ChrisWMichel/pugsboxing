@@ -1,0 +1,154 @@
+/*****************admin package description*************/
+.descSaveBtn{
+    margin-bottom:10px;
+}
+
+/****************User Profile  *********************/
+.user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:20px;
+}
+
+.textarea-width{
+    width:792px;
+}
+.bottom-buffer{
+    margin: 10px 0 40px;
+   /* border:1px solid black;*/
+
+}
+img{
+
+    padding: 5px;
+}
+img.noBorder{
+    box-shadow: none;
+    border:none;
+}
+.hidden{
+    display: none;
+}
+/**********Members Page***************/
+.shorten-length, .state-member{
+    width:40px;
+}
+.shorter-length{
+    width:30px;
+}
+.input-length{
+    width:500px;
+}
+.member-form input, .boxing-club-form input{
+    border-radius: 5px;
+    padding-left:2px;
+}
+.short-length{
+    width:100px;
+}
+.shorten-firstname{
+    width:160px;
+    padding:0;
+}
+/**********Package Page***************/
+.blue-title{
+    color: #2980b9;
+}
+.green-title{
+    color: #27a81f;
+    font-size:14px;
+}
+.red-title{
+    color: red;
+}
+.orange-title{
+    color: orange;
+}
+
+/***************All Members page *****************/
+.member-list{
+    min-height:600px;
+    border-radius: 5px;
+}
+.view-profile{
+    margin-top:20px;
+}
+#mem-list{
+    border-style:groove;
+    overflow-x: hidden;
+    overflow-y:  auto;
+    height:550px; /*50%*/
+}
+.top-buffer{
+    margin-top: 20px;
+}
+.increaseFont{
+    font-size:18px;
+    font-weight: bold;
+}
+#profile label{
+    color: blue;
+}
+.noStyleText{
+    border:none;
+    background: none;
+}
+.updateBtn{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.mem-expired{
+    color: red;
+}
+@media(min-width: 1200px){
+    .modal-lg{
+        width:900px;
+        height: 600px;
+    }
+}
+textarea.admin_message{
+    font-family:"Helvetica Neue", Helvetica, sans-serif;
+    width:100%;
+    font-size:14px;
+}
+.schedule-tble{
+    margin-top: 12px;
+}
+.list{
+    list-style: none;
+}
+
+.hide-msg{
+    display: none;
+}
+table th, table td{
+    text-align: center;
+}

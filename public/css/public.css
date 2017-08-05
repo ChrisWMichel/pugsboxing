@@ -1,0 +1,144 @@
+/*********Footer ********************/
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+/*********End Footer ********************/
+
+/* left and right border of the screen */
+#left-side, #right-side{
+    top: 0; bottom: 0;
+    width: 175px;
+    background: #a5ebff;
+    position: fixed;
+}
+#right-side{
+    right:0;
+    background: -moz-linear-gradient(left, rgba(222,232,242,0.51) 0%, rgba(131,185,239,0.68) 35%, rgba(116,179,242,0.8) 60%, rgba(67,153,239,0.89) 77%, rgba(32,124,202,0.96) 92%, rgba(32,124,202,0.99) 97%, rgba(32,124,202,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(222,232,242,0.51) 0%,rgba(131,185,239,0.68) 35%,rgba(116,179,242,0.8) 60%,rgba(67,153,239,0.89) 77%,rgba(32,124,202,0.96) 92%,rgba(32,124,202,0.99) 97%,rgba(32,124,202,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(222,232,242,0.51) 0%,rgba(131,185,239,0.68) 35%,rgba(116,179,242,0.8) 60%,rgba(67,153,239,0.89) 77%,rgba(32,124,202,0.96) 92%,rgba(32,124,202,0.99) 97%,rgba(32,124,202,1) 100%);
+
+}
+#left-side{
+    left:0;
+    background: -moz-linear-gradient(left, rgba(32,124,202,1) 0%, rgba(32,124,202,0.99) 3%, rgba(32,124,202,0.97) 8%, rgba(67,153,239,0.9) 23%, rgba(116,179,242,0.81) 40%, rgba(131,185,239,0.69) 65%, rgba(222,232,242,0.51) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(32,124,202,1) 0%,rgba(32,124,202,0.99) 3%,rgba(32,124,202,0.97) 8%,rgba(67,153,239,0.9) 23%,rgba(116,179,242,0.81) 40%,rgba(131,185,239,0.69) 65%,rgba(222,232,242,0.51) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(32,124,202,1) 0%,rgba(32,124,202,0.99) 3%,rgba(32,124,202,0.97) 8%,rgba(67,153,239,0.9) 23%,rgba(116,179,242,0.81) 40%,rgba(131,185,239,0.69) 65%,rgba(222,232,242,0.51) 100%);
+}
+
+@media
+only screen and (max-width: 1500px),
+only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+{
+#right-side, #left-side{display: none}
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+/* ************ End left and right border *****************/
+.carousel{
+    padding:15px 15px;
+}
+@media(max-width: 850px){
+    .carousel{
+        display: none;
+    }
+}
+/*********Footer ********************/
+
+body{
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+#container {
+    /*margin: 0 auto;
+    padding-top: 64px;
+    max-width: 640px;
+    width: 94%;*/
+}
+
+footer{
+    background: black;
+    color: darkgrey;
+    font-weight: bolder;
+    position: absolute;
+    right: 12%;
+    bottom: 0;
+    left: 12%;
+    padding: 1rem;
+    /*text-align: center;*/
+}
+footer p{
+    padding-top: 4px;
+    margin-top: 2px;
+}
+/*********End Footer ********************/
+
+.home-title{
+    font-family: 'Anton', sans-serif;
+}
+.left-list li{
+    list-style: none;
+    font-family: 'Trade Winds', cursive;
+    color: #b9222c;
+    text-shadow: rgb(40, 48, 51) 2px 0px 0px, rgb(40, 48, 51) 1.75517px 0.958851px 0px, rgb(40, 48, 51) 1.0806px 1.68294px 0px, rgb(40, 48, 51) 0.141474px 1.99499px 0px, rgb(40, 48, 51) -0.832294px 1.81859px 0px, rgb(40, 48, 51) -1.60229px 1.19694px 0px, rgb(40, 48, 51) -1.97998px 0.28224px 0px, rgb(40, 48, 51) -1.87291px -0.701566px 0px, rgb(40, 48, 51) -1.30729px -1.5136px 0px, rgb(40, 48, 51) -0.421592px -1.95506px 0px, rgb(40, 48, 51) 0.567324px -1.91785px 0px, rgb(40, 48, 51) 1.41734px -1.41108px 0px, rgb(40, 48, 51) 1.92034px -0.558831px 0px;
+    font-size: 35px;
+}
+.top-margin{
+    margin-top: 40px;
+}
+.right-content {
+    background: -moz-radial-gradient(center, ellipse cover, rgba(211,228,247,0.36) 0%, rgba(211,228,247,0.37) 1%, rgba(226,238,249,1) 62%, rgba(227,239,249,0.7) 68%, rgba(235,244,251,0) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(211,228,247,0.36) 0%,rgba(211,228,247,0.37) 1%,rgba(226,238,249,1) 62%,rgba(227,239,249,0.7) 68%,rgba(235,244,251,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(211,228,247,0.36) 0%,rgba(211,228,247,0.37) 1%,rgba(226,238,249,1) 62%,rgba(227,239,249,0.7) 68%,rgba(235,244,251,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5cd3e4f7', endColorstr='#00ebf4fb',GradientType=1 );
+}
+
+/**************** Members page *******************/
+.font-headings{
+    font-weight: bold
+}
+.blue-title{
+    color: #2980b9;
+}
+
+/********************** Class Schedule Page *****************/
+table tr td, table tr th{
+    text-align: center;
+    font-size:18px;
+}
+h2.panel-title{
+    text-align: center;
+}
+.home-padding{
+    padding:8px;
+}
+img{
+    box-shadow: 5px 5px 5px #888888;
+    border: 1px solid black;
+    /*padding:10px;*/
+    margin:8px;
+}
+img.noBorder{
+    box-shadow: none;
+    border:none;
+}
+
+/**********Contact Page***************/
+.contact-center{
+    text-align: center;
+}
+.contact-center h2{
+    text-align: left;
+}
