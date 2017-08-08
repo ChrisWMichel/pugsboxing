@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\admin;
 
 use App\Description;
-use App\MainLayout;
 use App\Membership;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -38,7 +37,8 @@ class PackagesController extends Controller
     }
 
     public function getdesc(){
-        $descriptions = Description::all()->where('title', '!=','About');
+        $descriptions = Description::all()->where('title', '!=','About')
+        ->where('title', '!=', 'Sale');
 
         return view('admin.cms.packagedesc', compact('descriptions'));
     }

@@ -39,10 +39,11 @@
                     $end = \Carbon\Carbon::parse($member->endMember);
                     $diffDays = $start->diffInDays($end);
                 ?>
-            @if(($diffDays <= 30) && $start < $end)
-                <button type="button" id="{{$member->id}}" class="btn btn-lg btn-warning member-select">{{$member->firstname}} {{$member->lastname}}</button>
-            @elseif( ($now > $end || $end->toDateString() == $now->toDateString()))
-                <button type="button" id="{{$member->id}}" class="btn btn-lg btn-danger member-select">{{$member->firstname}} {{$member->lastname}}</button>
+            @if(($diffDays <= 30) && ($now < $end))
+                        <button type="button" id="{{$member->id}}" class="btn btn-lg btn-warning member-select">{{$member->firstname}} {{$member->lastname}}</button>
+
+            @elseif(($now > $end)|| ($end->toDateString() == $now->toDateString()))
+                        <button type="button" id="{{$member->id}}" class="btn btn-lg btn-danger member-select">{{$member->firstname}} {{$member->lastname}}</button>
             @else
                 <button type="button" id="{{$member->id}}" class="btn btn-lg btn-success member-select">{{$member->firstname}} {{$member->lastname}}</button>
             @endif
@@ -63,7 +64,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content modal-lg">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">X</button>
                         <h4 class="modal-title">Archives</h4>
                     </div>
                     <div class="modal-body">
@@ -138,7 +139,7 @@
             url    : url,
             type   : 'get',
             data   : {'id' : mem_id},
-            success: function (data) {
+            success: function () {
                // console.log('member has been reactivated');
                 $(button).removeClass('btn-warning');
                 $(button).addClass('btn-success');
@@ -160,7 +161,7 @@
             url    : url,
             type   : 'get',
             data   : {'id' : mem_id},
-            success: function (data) {
+            success: function () {
                 // console.log('member has been reactivated');
                 $(link).text('Member has been marked for deletion.');
                 $(link).css({'pointer-events' : 'none'});

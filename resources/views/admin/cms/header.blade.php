@@ -22,6 +22,7 @@
 
         {!! Form::label('path', 'Add Photo.') !!}<br>
         {!! Form::file('path', null, ['class' => 'form-control']) !!}
+        &nbsp;&nbsp; Recommend image size: 629px by 223px
 
     </div>
     <div class="form-group">
@@ -58,7 +59,7 @@
                    <td align="center">
                        {!! Form::open(['method'=>'Delete', 'action'=> ['admin\HeaderController@destroy',  $photo->id]]) !!}
                        {{csrf_field()}}
-                       <button type="submit" class="btn btn-danger">X</button>
+                       <button type="button" class="btn btn-danger">X</button>
                        {!! Form::close() !!}
 
                    </td>
