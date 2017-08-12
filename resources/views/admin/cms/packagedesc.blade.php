@@ -6,7 +6,7 @@
     <h2 class="page-header">Description for packages</h2>
 
     @foreach($descriptions as $description)
-    {!! Form::model($description, ['method'=>'Patch', 'action'=> ['admin\MembershipController@update',  $description->id]]) !!}
+    {!! Form::model($description, ['method'=>'Patch', 'action'=> ['admin\MembershipController@update',  $description->id ]]) !!}
     {{csrf_field()}}
 
     <div class="form-group">
@@ -27,5 +27,7 @@
 @endsection
 
 @section('scripts')
+<script>
 
+</script>
 @endsection

@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\HeaderPhoto;
 use App\Http\Controllers\Controller;
+use App\MainLayout;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -37,8 +41,17 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function logout() {
+        Auth::logout();
 
-// use this method to load up the calendar in the /admin page
+        $phone = MainLayout::select('phone')->first();
+        $photos = HeaderPhoto::where('visible', 1)->get();
+
+        return view('layouts.public_layout', compact('photos', 'phone'));
+    }
+
+
+    // use this method to load up the calendar in the /admin page
    /* protected function redirectTo()
     {
         return '/path';

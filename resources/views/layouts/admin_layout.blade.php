@@ -73,7 +73,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ auth()->user()->firstname }} <span class="caret"></span></a>
                     <ul class="dropdown-menu dropdown-user" role="menu">
-                        <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+                        <li><a href="{{ url('/logout') }}">Logout</a></li>
 
                        {{-- <li><a href="{{ url('/admin/profile') }}/{{auth()->user()->id}}">Profile</a></li>--}}
                     </ul>

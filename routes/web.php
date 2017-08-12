@@ -15,9 +15,7 @@
     return view('welcome');
 });*/
 
-
 Auth::routes();
-
 //Route::get('/home', 'HomeController@index')->name('home');
 
 
@@ -87,6 +85,8 @@ Route::group(['middleware' => 'auth'], function (){ /*'prefix' => 'admin', */
     Route::get('autocomplete', 'admin\AppointmentsController@autoComplete')->name('autocomplete');
     Route::get('update_appointments', 'admin\AppointmentsController@updateAppointment');
     Route::get('delete_appointment/{id}', 'admin\AppointmentsController@deleteAppointment');
+
+    Route::get('logout', 'Auth\LoginController@logout');
 
 });
 
