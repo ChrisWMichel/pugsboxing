@@ -54,7 +54,11 @@
             </div>
         </div>
     </div>
+    <div class="processing text-center">
+        <img src="{{asset('sending_email.gif')}}" width="274px" height="274px" style="border: none; box-shadow: none">
+    </div>
 </div>
+
 
 <script>
     $.ajaxSetup({
@@ -62,6 +66,7 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+    $('.processing').hide();
 
     $('#contact-form').on('submit', function(e){
         e.preventDefault();
@@ -73,6 +78,9 @@
             'message'   : $('#message').val()
         };
 
+        $('#contact-page').hide();
+        $('.processing').show();
+
         const url = '/contact';
 
         $.ajax({
@@ -81,12 +89,14 @@
             data   : data,
             dataType: "json",
             success: function (data) {
+                $('.processing').hide();
                 $('#contact-page').html("<h3 style='color: blue; margin-top: 50px;'> Thanks for contacting us " + data.firstname + ". Your message has been sent.</h3>").fadeOut(1).delay(20).fadeIn('slow');
             },
             error  : function (data) {
                 //let response = jQuery.parseJSON(data.responseText);
                 let response = JSON.parse(data.responseText);
                 printErrorMsg(response);
+                data.responseText = [];
             }
         });
 

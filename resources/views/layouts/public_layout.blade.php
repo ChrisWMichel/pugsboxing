@@ -118,10 +118,10 @@
                 type: 'GET',
                 data: 'id=home',
                 success: function(data){
-                    $('.mainLayout').html(data).fadeOut(1).delay(20).fadeIn('slow'); //.fadeOut(1).delay(20).fadeIn('slow')
+                    $('.mainLayout').html(data).fadeOut(1).delay(20).fadeIn('slow');
                 },
                 error: function(data){
-                    console.log(data);
+                    //console.log(data);
                     $('.mainLayout').html('Something went wrong onload.');
                 }
             })
@@ -147,7 +147,7 @@
                         $('.mainLayout').html(data).fadeIn('slow'); //.fadeOut(1).delay(20).fadeIn('slow')
                     },
                     error: function(data){
-                        console.log(data);
+                        //console.log(data);
                         $('.mainLayout').html('Something went wrong.');
                     }
                 })

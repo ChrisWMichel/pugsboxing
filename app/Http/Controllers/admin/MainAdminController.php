@@ -38,7 +38,6 @@ class MainAdminController extends Controller
 
         $admin = User::create($input);
 
-        //Todo all the code is completed, but not tested.
         Mail::to($admin)->send(new newAdmin($admin));
 
         flash('An email has been sent to the user. Once they complete the registration, your new admin will be able to login.')->success();
